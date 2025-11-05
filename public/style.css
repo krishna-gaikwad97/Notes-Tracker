@@ -1,0 +1,17 @@
+body{
+    background-color: bisque;
+}
+ul{
+    list-style-type: square;
+    color: rgb(27, 24, 23);
+    background-color: burlywood;
+}
+p{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: darkslategray;
+}
+h2{
+     color: rgb(27, 24, 23);
+    background-color: burlywood;
+}

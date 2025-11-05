@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All posts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>All Notes</h1>
+    <ul>
+        <% for(post of posts) { %>
+            <li>
+                <h2>@<%= post.name %></h2>
+                <h4><%= post.content %></h4>
+                <p><%=post.notes %></p>
+                <a href="/posts/<%= post.id %>">View Details</a>
+                <form action="/posts/<%=post.id %>/delete" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                    <a href="/posts/<%=post.id %>/edit">Edit</a>
+                </form>
+                <hr>
+
+            </li>
+              
+        <% } %>
+
+
+    </ul>
+    <a href="/posts/new">Create new Notes</a>
+    <script src="index.js"></script>
+</body>
+</html>
